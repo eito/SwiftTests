@@ -10,6 +10,7 @@
 		4E20D4B51956A00900074D1C /* SwiftOnlyFeaturesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E20D4B41956A00900074D1C /* SwiftOnlyFeaturesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E20D4BB1956A00900074D1C /* SwiftOnlyFeaturesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E20D4AF1956A00900074D1C /* SwiftOnlyFeaturesFramework.framework */; };
 		4E20D4C21956A00900074D1C /* SwiftOnlyFeaturesFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20D4C11956A00900074D1C /* SwiftOnlyFeaturesFrameworkTests.swift */; };
+		4E20D4CC1956A09400074D1C /* SwiftFoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20D4CB1956A09400074D1C /* SwiftFoo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4E20D4BA1956A00900074D1C /* SwiftOnlyFeaturesFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftOnlyFeaturesFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E20D4C01956A00900074D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E20D4C11956A00900074D1C /* SwiftOnlyFeaturesFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOnlyFeaturesFrameworkTests.swift; sourceTree = "<group>"; };
+		4E20D4CB1956A09400074D1C /* SwiftFoo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFoo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				4E20D4B41956A00900074D1C /* SwiftOnlyFeaturesFramework.h */,
+				4E20D4CB1956A09400074D1C /* SwiftFoo.swift */,
 				4E20D4B21956A00900074D1C /* Supporting Files */,
 			);
 			path = SwiftOnlyFeaturesFramework;
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E20D4CC1956A09400074D1C /* SwiftFoo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +324,7 @@
 		4E20D4C61956A00900074D1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -329,12 +334,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4E20D4C71956A00900074D1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

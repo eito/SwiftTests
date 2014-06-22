@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestSwiftOnlyFeaturesObjC/TestSwiftOnlyFeaturesObjC.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SwiftOnlyFeaturesFramework/SwiftOnlyFeaturesFramework.xcodeproj">
    </FileRef>
 </Workspace>
